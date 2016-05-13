@@ -1,0 +1,20 @@
+<div class="panel-body" ng-controller="TimelineCtrl">
+    <ul class="timeline">
+        <li ng-repeat="data in datas" ng-class="data.class">
+            <div class="timeline-badge success" ng-show="data.rating == 'good'"><i class="fa fa-check"></i>
+            </div>
+			<div class="timeline-badge danger" ng-show="data.rating == 'bad'"><i class="fa fa-ban"></i>
+            </div>
+            <div class="timeline-panel">
+                <div class="timeline-heading">
+                    <h4 class="timeline-title">{{data.heading}}</h4>
+                    <p><small class="text-muted"><i class="fa fa-clock-o"></i>{{data.time}}</small>
+                    </p>
+                </div>
+                <div class="timeline-body">
+                    <p>{{data.des}}</p>
+                </div>
+            </div>
+        </li>       
+    </ul>
+</div>
